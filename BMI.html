@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BMI CALCULATOR</title>
+  </head>
+
+  <body>
+    <style>
+      .header {
+        font-size: 50px;
+        text-align: center;
+        color: rgb(57, 123, 126);
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+
+      .section {
+        margin: 10px 10px 10px 10px;
+        border: 1px solid rgb(23, 105, 118);
+        width: 33%;
+        padding: 15px;
+      }
+
+      .container {
+        display: flex;
+      }
+
+      .mini-header2 {
+        text-align: center;
+        color: rgb(29, 29, 115);
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 25px;
+      }
+
+      .button {
+        background-color: #579cb3;
+        font-size: 12px;
+        border-radius: 4px;
+      }
+
+      .input {
+        border: 2px solid rgb(11, 51, 77);
+        border-radius: 4px;
+      }
+
+      .mini-header4 {
+        text-align: center;
+        color: rgb(26, 26, 125);
+        background-color: lightskyblue;
+      }
+
+      .big-words {
+        font-size: 25px;
+        color: darkblue;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .form-wrapper {
+        border: 3px dotted #195367;
+        border-radius: 4px;
+      }
+    </style>
+
+    <header>
+      <h1 class="header">&#129744;BMI CALCULATOR&#129744;</h1>
+    </header>
+
+    <div class="container">
+      <div class="section">
+        <h2 class="mini-header2">&#127815;YOUR PARAMETERS</h2>
+        <div class="form-wrapper">
+          <label for="weight">Enter your weight in kilos (40-200):</label>
+          <br />
+          <input type="number" name="weight" id="weight" min="40" max="200" step="0.1" />
+          <br />
+
+          <label for="height">Enter your height in centimeters (120-240):</label>
+          <br />
+          <input type="number" name="height" id="height" min="120" max="240" step="0.1" />
+        </div>
+        <br />
+
+        <button class="button" name="button" id="button">Confirm</button>
+        <button class="button" name="clear-button" id="clear-button">Clear</button>
+      </div>
+
+      <div class="section">
+        <h2 class="mini-header2">&#127815;YOUR RESULTS</h2>
+        <h4 class="mini-header4">BMI=WEIGHT/HEIGHT&#178;</h4>
+        <p>Your weight: <span id="weight-number"></span></p>
+        <p>Your height: <span id="height-number"></span></p>
+        <p class="big-words">Your BMI: <span id="BMI"></span></p>
+      </div>
+
+      <div class="section">
+        <h2 class="mini-header2">&#127815;HISTORY OF YOUR MEASUREMENTS</h2>
+        <h3>MEASUREMENT:</h3>
+        <ul id="list"></ul>
+        <h3>AVERAGE OF THE MEASUREMENTS:</h3>
+        <span class="big-words" id="AVG"></span>
+      </div>
+    </div>
+
+    <script src="./BMI.js"></script>
+  </body>
+</html>
